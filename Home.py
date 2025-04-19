@@ -1,12 +1,11 @@
 import streamlit as st
-import pandas
 
 st.set_page_config(layout="wide")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/photo.png", width=500, output_format="auto")
+    st.image("images/photo.png", width=400, output_format="auto")
 
 with col2:
     st.title("Pronoy Malick")
@@ -16,25 +15,3 @@ with col2:
     best to cover all type of projects through PYTHON"""
 
     st.info(content1)
-
-content2 = """ Here below are attached my App and Websites I build so far. Feel free to Contact me"""
-st.write(content2)
-
-col3,empty_col, col4 = st.columns([2,2,2])
-
-df = pandas.read_csv("data.csv", sep=";")
-
-with col3:
-    for index, row in df[:10].iterrows():
-        st.header(row["title"])
-        st.info(row["description"])
-        st.image("images/" + row["image"])
-        st.link_button("Source Code",row["url"], help="Go to Github")
-
-with col4:
-    for index, row in df[10:].iterrows():
-        st.header(row["title"])
-        st.info(row["description"])
-        st.image("images/" + row["image"])
-        st.link_button("Source Code",row["url"], help="Go to Github")
-
