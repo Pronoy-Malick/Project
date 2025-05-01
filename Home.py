@@ -2,6 +2,17 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
+st.markdown("""
+    <style>
+    .stApp {
+        background-image: images/python.png;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 col1, col2 = st.columns(2)
 
 with col1:
