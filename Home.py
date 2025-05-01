@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 
 st.markdown("""
     <style>
     .stApp {
-        background-image: images/python.png;
+        background-image: url("https://picsum.photos/1600/900");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
